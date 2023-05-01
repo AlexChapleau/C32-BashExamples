@@ -5,7 +5,10 @@
 # Avant de réafficher le menu, effacer l'écran. Utiliser une boucle until.
 
 
-afficherMenu(){
+
+fin=0
+until [[ $fin = 1 ]]
+do
     clear
     echo "------------------------"
     echo "-   Labo bash Q6 101   -"
@@ -13,13 +16,6 @@ afficherMenu(){
     echo "- a ou A = afficher le contenu du répertoire /root"
     echo "- b ou B = afficher le contenu du fichier /etc/passwd"
     echo "- q ou Q = quitter"
-    
-}
-
-fin=0
-until [[ $fin = 1 ]]
-do
-    afficherMenu
     read -p "Entrez un choix: " choix
     case $choix in 
         [a,A])
